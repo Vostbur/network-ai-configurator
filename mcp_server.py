@@ -152,7 +152,7 @@ async def chat_endpoint(request: ChatRequest):
         f"[LOG SERVER] Получен запрос: device_type={request.device_type}, device_ip={request.device_ip}, username={'***' if request.username else 'None'}, password={'***' if request.password else 'None'}, messages={request.messages}"
     )
 
-    model_name = os.getenv("OLLAMA_MODEL", "mistral")
+    model_name = os.getenv("OLLAMA_MODEL", "phi3:mini")
 
     user_query = request.messages[-1]["content"] if request.messages else ""
     print(f"[LOG SERVER] Анализируется запрос пользователя: '{user_query}'")
