@@ -49,16 +49,16 @@ async def get_user_input_async(session: PromptSession, prompt: str = ">>> "):
     """Асинхронное получение ввода от пользователя через prompt_toolkit."""
     return await session.prompt_async(prompt, completer=command_completer, style=style)
 
-async def ensure_device_info():
+async def ensure_device_info(session: PromptSession): # <-- Принимает session
     """Запрашивает у пользователя недостающие данные подключения."""
     if not device_info["ip"]:
-        device_info["ip"] = await get_user_input_async(None, f"{Fore.LIGHTBLUE_EX}Введите IP-адрес устройства: {ColoramaStyle.RESET_ALL}")
+        device_info["ip"] = await get_user_input_async(session, f"{Fore.LIGHTBLUE_EX}Введите IP-адрес устройства: {ColoramaStyle.RESET_ALL}")
     if not device_info["username"]:
-        device_info["username"] = await get_user_input_async(None, f"{Fore.LIGHTBLUE_EX}Введите имя пользователя: {ColoramaStyle.RESET_ALL}")
+        device_info["username"] = await get_user_input_async(session, f"{Fore.LIGHTBLUE_EX}Введите имя пользователя: {ColoramaStyle.RESET_ALL}")
     if not device_info["password"]:
-        device_info["password"] = await get_user_input_async(None, f"{Fore.LIGHTBLUE_EX}Введите пароль: {ColoramaStyle.RESET_ALL}")
+        device_info["password"] = await get_user_input_async(session, f"{Fore.LIGHTBLUE_EX}Введите пароль: {ColoramaStyle.RESET_ALL}")
     if not device_info["type"]:
-        device_info["type"] = await get_user_input_async(None, f"{Fore.LIGHTBLUE_EX}Введите тип устройства (например, cisco_ios): {ColoramaStyle.RESET_ALL}")
+        device_info["type"] = await get_user_input_async(session, f"{Fore.LIGHTBLUE_EX}Введите тип устройства (например, cisco_ios): {ColoramaStyle.RESET_ALL}")
 
 async def chat_with_model(messages: list):
     """Отправляет сообщения на MCP-сервер и получает ответ."""
@@ -136,7 +136,7 @@ async def main():
 
         if needs_config:
             print("Проверяю наличие данных подключения...")
-            await ensure_device_info()
+            await ensure_device_info(session) # <-- Передаём session сюда
             # Обновляем системное сообщение с новой информацией
             messages[0]["content"] = f"Вы - помощник по настройке сетевого оборудования {device_info['type']}. Используйте инструменты для поиска и выполнения команд."
 
