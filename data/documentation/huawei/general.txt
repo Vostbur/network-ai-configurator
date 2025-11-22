@@ -1,0 +1,9 @@
+system-view - вход в системный вид
+sysname <new_name> - изменить имя хоста
+display version - показать версию ПО
+display current-configuration - показать текущую конфигурацию
+save - сохранить конфигурацию
+user-interface vty 0 4 - настройка VTY линий
+authentication-mode password - настройка аутентификации
+quit - выход из текущего режима
+return - возврат в пользовательский режим

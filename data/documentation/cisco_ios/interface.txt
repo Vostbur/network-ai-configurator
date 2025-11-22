@@ -1,0 +1,11 @@
+interface <type> <number> - вход в режим конфигурации интерфейса
+ip address <A.B.C.D> <A.B.C.D> - назначение IP-адреса интерфейсу
+no shutdown - включение интерфейса
+shutdown - отключение интерфейса
+description <text> - добавить описание интерфейса
+speed <speed> - настроить скорость интерфейса
+duplex <full|half> - настроить дуплекс интерфейса
+switchport mode access - настроить порт как access
+switchport mode trunk - настроить порт как trunk
+switchport access vlan <vlan-id> - назначить access порт в VLAN
+switchport trunk allowed vlan <vlan-list> - разрешить VLAN на trunk

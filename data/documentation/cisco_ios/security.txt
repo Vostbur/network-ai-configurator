@@ -1,0 +1,6 @@
+access-list <number> permit|deny <protocol> <source> <destination> - создать ACL
+ip access-list standard <name> - создать именованный стандартный ACL
+ip access-list extended <name> - создать именованный расширенный ACL
+ip ssh version 2 - включить SSHv2
+username <name> secret <password> - создать пользователя с шифрованным паролем
+enable secret <password> - установить привилегированный пароль EXEC

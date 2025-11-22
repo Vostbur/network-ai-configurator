@@ -1,0 +1,9 @@
+interface <interface-type> <interface-number> - вход в режим интерфейса
+ip address <ip-address> <mask> - настроить IP адрес
+undo shutdown - включить интерфейс
+shutdown - отключить интерфейс
+description <text> - добавить описание интерфейса
+port link-type access - настроить порт как access
+port link-type trunk - настроить порт как trunk
+port default vlan <vlan-id> - назначить access порт в VLAN
+port trunk allow-pass vlan <vlan-list> - разрешить VLAN на trunk

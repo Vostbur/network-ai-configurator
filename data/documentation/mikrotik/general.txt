@@ -1,0 +1,6 @@
+/system identity set name=<name> - изменить имя хоста
+/system resource print - показать ресурсы
+/system backup save name=<name> - создать бэкап
+/system backup load name=<name> - загрузить бэкап
+/system reboot - перезагрузка
+/system shutdown - выключение

@@ -1,0 +1,6 @@
+ospf <process-id> - создать процесс OSPF
+area <area-id> - создать область OSPF
+network <network> <wildcard-mask> - объявить сеть в OSPF
+ip route-static <network> <mask> <next-hop> - статический маршрут
+bgp <as-number> - начать настройку BGP
+peer <ip-address> as-number <as-number> - настроить BGP соседа

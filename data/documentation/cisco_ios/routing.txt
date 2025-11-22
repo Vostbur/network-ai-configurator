@@ -1,0 +1,6 @@
+router ospf <process-id> - создание процесса OSPF
+network <A.B.C.D> <wildcard-mask> area <area-id> - объявление сетей в OSPF
+ip route <network> <mask> <next-hop> - статический маршрут
+router bgp <as-number> - начать настройку BGP
+neighbor <ip-address> remote-as <as-number> - настроить BGP соседа
+redistribute <protocol> - redistribute маршрутов в протокол

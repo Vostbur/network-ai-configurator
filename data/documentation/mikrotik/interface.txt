@@ -1,0 +1,6 @@
+/interface bridge add name=<name> - создание bridge
+/ip address add address=<ip/mask> interface=<interface> - добавить IP адрес
+/interface enable <interface> - включить интерфейс
+/interface disable <interface> - отключить интерфейс
+/interface set <interface> name=<new_name> - переименовать интерфейс
+/interface vlan add name=<name> interface=<parent> vlan-id=<id> - создать VLAN интерфейс

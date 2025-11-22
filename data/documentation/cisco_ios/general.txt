@@ -1,0 +1,12 @@
+enable - переход в привилегированный EXEC режим
+configure terminal - вход в режим глобальной конфигурации
+hostname <new_name> - изменить имя хоста маршрутизатора. Поменять имя хоста. Установить имя хоста. hostname cisco1. поменяй имя хоста на cisco1. change hostname to cisco1. set hostname to cisco1.
+show version - показать версию ПО
+show running-config - показать текущую конфигурацию
+copy running-config startup-config - сохранить конфигурацию
+username <name> privilege <level> password <password> - создание пользователя
+ip domain-name <domain> - настроить имя домена
+ip name-server <ip-address> - настроить DNS сервер
+service password-encryption - шифровать пароли в конфигурации
+banner motd <banner_text> - настроить баннер сообщения дня
+no ip domain-lookup - отключить DNS lookup для опечаток
